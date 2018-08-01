@@ -7,10 +7,12 @@ import dagger.android.AndroidInjectionModule
 import me.pranay.kotlinmvvm.App
 import me.pranay.kotlinmvvm.di.common.ApplicationScope
 import me.pranay.kotlinmvvm.di.module.ApplicationModule
+import me.pranay.kotlinmvvm.di.module.activity.ActivityModule
 
 @ApplicationScope
 @Component(modules = [AndroidInjectionModule::class,
-                      ApplicationModule::class])
+                      ApplicationModule::class,
+                      ActivityModule::class])
 interface ApplicationComponent{
 
         fun inject(application: App):Unit;
