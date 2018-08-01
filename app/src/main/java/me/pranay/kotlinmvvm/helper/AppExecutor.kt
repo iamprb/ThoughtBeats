@@ -1,4 +1,4 @@
-package me.pranay.kotlinmvvm.AppExecutor
+package me.pranay.kotlinmvvm.helper
 
 import android.os.Handler
 import android.os.Looper

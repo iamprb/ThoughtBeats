@@ -2,7 +2,7 @@ package me.pranay.kotlinmvvm.di.module
 
 import dagger.Module
 import dagger.Provides
-import me.pranay.kotlinmvvm.AppExecutor.AppExecutors
+import me.pranay.kotlinmvvm.helper.AppExecutors
 import me.pranay.kotlinmvvm.di.common.ApplicationScope
 import me.pranay.kotlinmvvm.di.module.fragment.FirstFragmentModule
 import me.pranay.kotlinmvvm.di.module.viewmodel.FirstViewModelModule
