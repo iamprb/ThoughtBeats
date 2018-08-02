@@ -10,6 +10,10 @@ class FirstFragmentViewModel @Inject constructor(var repository: FirstFragmentRe
 
     fun getToastString()=repository.getToastString()
 
+    fun insertUserDetails()=repository.insertUserDetails()
+
+    fun getUserDetails()=repository.getUserdetails()
+
     override fun getViewModel()=this
 
 }
