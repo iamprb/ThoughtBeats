@@ -18,21 +18,15 @@ class FirstFragment : AbstractBaseFragment<FirstFragmentViewModel>() {
 
     @Inject
     lateinit var viewModels:FirstFragmentViewModel
-
-
     override fun onActivityCreated(savedInstanceState: Bundle?) {
-        ///This is for test only//
         super.onActivityCreated(savedInstanceState)
         Toast.makeText(context,viewModels.getToastString(),Toast.LENGTH_SHORT).show()
         viewModels.insertUserDetails()
-
         viewModels.getUserDetails().observe(this , Observer{ userDetail ->
-
             if(userDetail!=null && !userDetail.isEmpty()){
                 tv_address.text=userDetail[userDetail.size-1].userDesignation
             }
         })
-
     }
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
