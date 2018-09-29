@@ -12,8 +12,7 @@ class AppExecutors(val diskOp: Executor, val networkOp: Executor, val mainThread
 
     @Inject
     constructor() : this(Executors.newSingleThreadExecutor(), Executors.newFixedThreadPool(4),
-            MainThreadExecutor()) {
-    }
+            MainThreadExecutor())
 
     private class MainThreadExecutor : Executor {
         private val mainThreadHandler = Handler(Looper.getMainLooper())

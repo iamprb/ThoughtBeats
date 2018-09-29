@@ -4,7 +4,7 @@ import me.pranay.kotlinmvvm.Base.viewmodel.AbstractViewModel
 import me.pranay.kotlinmvvm.repository.firstFragmentRepository.FirstFragmentRepositoryImpl
 import javax.inject.Inject
 
-class FirstFragmentViewModel @Inject constructor(var repository: FirstFragmentRepositoryImpl)
+class FirstFragmentViewModel @Inject constructor(private var repository: FirstFragmentRepositoryImpl)
             : AbstractViewModel()
 {
 

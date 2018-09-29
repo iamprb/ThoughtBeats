@@ -7,6 +7,24 @@
     android:id="@+id/container"
     tools:context=".ui.entrypoint.activity.MainActivity">
 
+    <TextView
+        android:id="@+id/tv_barcodeText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="364dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_codeScan"
+        tools:layout_editor_absoluteX="192dp" />
 
+    <Button
+        android:id="@+id/btn_codeScan"
+        android:layout_width="99dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Scan"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

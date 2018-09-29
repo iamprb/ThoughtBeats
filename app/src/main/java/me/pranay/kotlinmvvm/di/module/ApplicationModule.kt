@@ -15,7 +15,7 @@ import java.io.File
 @Module(includes = [ViewModelModule::class,
                     FirstFragmentModule::class,
                     FirstViewModelModule::class])
-class   ApplicationModule{
+class  ApplicationModule{
     enum class ApplicationMode {
         NORMAL, TESTING
     }

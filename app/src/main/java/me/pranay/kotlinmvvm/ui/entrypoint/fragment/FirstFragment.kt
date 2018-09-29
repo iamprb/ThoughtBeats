@@ -5,7 +5,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import android.widget.Toast
+import com.google.zxing.Result
 import kotlinx.android.synthetic.main.fragment_first.*
 import me.pranay.kotlinmvvm.Base.fragment.AbstractBaseFragment
 import me.pranay.kotlinmvvm.R
@@ -14,6 +16,11 @@ import javax.inject.Inject
 
 
 class FirstFragment : AbstractBaseFragment<FirstFragmentViewModel>() {
+
+    lateinit var  QROutput:String
+    public fun FirstFragment(p0: Result?){
+        QROutput= p0.toString()
+    }
     override fun getViewModel()=FirstFragmentViewModel::class.java
 
     @Inject
@@ -27,10 +34,16 @@ class FirstFragment : AbstractBaseFragment<FirstFragmentViewModel>() {
                 tv_address.text=userDetail[userDetail.size-1].userDesignation
             }
         })
+
+
+
     }
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_first, container, false)
     }
 
+    companion object {
+        var  tv_address :TextView?=null
+    }
 }
